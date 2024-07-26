@@ -1,0 +1,27 @@
+! name: Armenian Adult Content
+! description: Goggle for finding Armenian adult videos and erotica
+! public: false
+! author: [Your Name]
+! homepage: [Your Homepage URL] (optional)
+! issues: [Your Issue Reporting URL] (optional)
+! avatar: #ff5733 (optional, HEX color for your Goggle)
+! license: [License] (optional)
+
+! Boost results from known Armenian adult sites
+|https://example-armenia-adult-site.com
+|https://another-armenia-adult-site.com
+
+! Boost results with Armenian-related keywords in the URL
+/armenian-adult-videos$boost
+/armenian-erotica$boost
+
+! Boost results with Armenian keywords in the page title (future feature)
+web3$intitle=armenian-adult
+
+! Downrank results from generic adult sites
+/r/genericadultsite.com$downrank
+/r/anothergenericadultsite.com$downrank
+
+! Discard results from non-relevant or undesired content
+$discard,site=genericadultsite.com
+/this-is-not-relevant/$discard
